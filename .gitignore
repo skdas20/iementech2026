@@ -4,20 +4,118 @@
 /node_modules
 /.pnp
 .pnp.js
+jspm_packages/
 
 # testing
 /coverage
+*.lcov
+.nyc_output
 
 # production
 /build
+/dist
+dist/
+dist-ssr/
+out/
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+.eslintcache
+.stylelintcache
+
+# Parcel cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+
+# Gatsby files
+public
+
+# Vite
+*.local
+
+# Rollup.js default build output
+dist/
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# IDEs
+.idea
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# Editor files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary folders
+tmp/
+temp/
+
+# Storybook build outputs
+storybook-static
+
+# TypeScript cache
+*.tsbuildinfo
