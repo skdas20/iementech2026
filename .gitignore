@@ -57,7 +57,7 @@ pids
 .nuxt
 
 # Gatsby files
-public
+# public (commented out for React apps that need public folder)
 
 # Vite
 *.local
