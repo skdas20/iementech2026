@@ -65,6 +65,11 @@ const ContentGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 `;
 
 const InfoCard = styled.div`
@@ -82,6 +87,11 @@ const InfoCard = styled.div`
     transform: translateY(-5px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
     border-color: rgba(250, 169, 47, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    border-radius: 10px;
   }
 `;
 
@@ -116,6 +126,12 @@ const PriceTable = styled.div`
   border: 1px solid rgba(250, 169, 47, 0.1);
   margin-bottom: 3rem;
   animation: ${fadeInUp} 1s ease-out 0.4s both;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    border-radius: 10px;
+    overflow-x: auto;
+  }
 `;
 
 const TableTitle = styled.h3`
@@ -128,12 +144,23 @@ const TableTitle = styled.h3`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1rem;
+  min-width: 600px;
+  
+  @media (max-width: 768px) {
+    min-width: 500px;
+    font-size: 0.9rem;
+  }
 `;
 
 const TableHeader = styled.th`
@@ -149,6 +176,11 @@ const TableHeader = styled.th`
   
   &:last-child {
     border-top-right-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -166,6 +198,10 @@ const TableCell = styled.td`
   padding: 1rem;
   border-bottom: 1px solid #e2e8f0;
   color: #334155;
+  
+  @media (max-width: 768px) {
+    padding: 0.75rem 0.5rem;
+  }
 `;
 
 const ImportantNote = styled.div`
@@ -175,6 +211,11 @@ const ImportantNote = styled.div`
   padding: 2rem;
   margin-bottom: 2rem;
   animation: ${fadeInUp} 1s ease-out 0.6s both;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
 `;
 
 const NoteTitle = styled.h4`
@@ -201,6 +242,11 @@ const ContactInfo = styled.div`
   border: 1px solid rgba(250, 169, 47, 0.1);
   text-align: center;
   animation: ${fadeInUp} 1s ease-out 0.8s both;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
 `;
 
 const ContactTitle = styled.h3`
@@ -221,6 +267,18 @@ const ContactDetails = styled.div`
   
   strong {
     color: #1e293b;
+  }
+`;
+
+const TableWrapper = styled.div`
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  
+  @media (max-width: 768px) {
+    margin: 0 -1.5rem;
+    padding: 0 1.5rem;
   }
 `;
 
@@ -271,45 +329,46 @@ const Registration = () => {
               • Visa documentation (if required)
             </CardContent>
           </InfoCard>
-        </ContentGrid>
-          <PriceTable>
+        </ContentGrid>          <PriceTable>
           <TableTitle>Registration Fees</TableTitle>
-          <Table>
-            <thead>
-              <tr>
-                <TableHeader>Category</TableHeader>
-                <TableHeader>Early Bird Registration</TableHeader>
-                <TableHeader>Late Registration</TableHeader>
-                <TableHeader>IEEE Members</TableHeader>
-              </tr>
-            </thead>
-            <tbody>
-              <TableRow>
-                <TableCell><strong>Students</strong></TableCell>
-                <TableCell>₹9,500</TableCell>
-                <TableCell>₹10,000</TableCell>
-                <TableCell>₹9,000</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><strong>Researchers</strong></TableCell>
-                <TableCell>₹10,500</TableCell>
-                <TableCell>₹11,000</TableCell>
-                <TableCell>₹10,000</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><strong>Industry</strong></TableCell>
-                <TableCell>₹12,500</TableCell>
-                <TableCell>₹13,000</TableCell>
-                <TableCell>₹12,000</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell><strong>Foreign Delegates</strong></TableCell>
-                <TableCell>$300</TableCell>
-                <TableCell>$350</TableCell>
-                <TableCell>$250</TableCell>
-              </TableRow>
-            </tbody>
-          </Table>
+          <TableWrapper>
+            <Table>
+              <thead>
+                <tr>
+                  <TableHeader>Category</TableHeader>
+                  <TableHeader>Early Bird Registration</TableHeader>
+                  <TableHeader>Late Registration</TableHeader>
+                  <TableHeader>IEEE Members</TableHeader>
+                </tr>
+              </thead>
+              <tbody>
+                <TableRow>
+                  <TableCell><strong>Students</strong></TableCell>
+                  <TableCell>₹9,500</TableCell>
+                  <TableCell>₹10,000</TableCell>
+                  <TableCell>₹9,000</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><strong>Researchers</strong></TableCell>
+                  <TableCell>₹10,500</TableCell>
+                  <TableCell>₹11,000</TableCell>
+                  <TableCell>₹10,000</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><strong>Industry</strong></TableCell>
+                  <TableCell>₹12,500</TableCell>
+                  <TableCell>₹13,000</TableCell>
+                  <TableCell>₹12,000</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell><strong>Foreign Delegates</strong></TableCell>
+                  <TableCell>$300</TableCell>
+                  <TableCell>$350</TableCell>
+                  <TableCell>$250</TableCell>
+                </TableRow>
+              </tbody>
+            </Table>
+          </TableWrapper>
           <div style={{ marginTop: '1rem', textAlign: 'center', color: '#64748b', fontSize: '0.9rem' }}>
             * 18% GST included in all Indian registration fees
           </div>

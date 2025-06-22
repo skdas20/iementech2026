@@ -103,11 +103,23 @@ const TimelineSVG = styled.svg`
       animation-delay: 2s;
     }
   }
-  
-  @media (max-width: 768px) {
-    left: 40px;
+    @media (max-width: 768px) {
+    left: 15px;
     transform: none;
-    width: 4px;
+    width: 6px;
+    height: auto;
+    
+    .zigzag-path {
+      stroke-width: 3;
+    }
+    
+    .moving-dot {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    left: 10px;
   }
 `;
 
@@ -117,6 +129,10 @@ const PageContainer = styled.div`
   padding: 6rem 0 4rem 0;
   position: relative;
   overflow-x: hidden;
+  
+  @media (max-width: 768px) {
+    padding: 4rem 0 2rem 0;
+  }
 `;
 
 const Container = styled.div`
@@ -125,6 +141,10 @@ const Container = styled.div`
   padding: 0 2rem;
   position: relative;
   z-index: 2;
+  
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
 `;
 
 const PageTitle = styled.h1`
@@ -150,12 +170,23 @@ const PageSubtitle = styled.p`
   color: #64748b;
   margin-bottom: 4rem;
   animation: ${fadeInUp} 1s ease-out 0.2s both;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
 `;
 
 const TimelineContainer = styled.div`
   position: relative;
   max-width: 900px;
   margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding-left: 0;
+  }
 `;
 
 const TimelineItem = styled.div`
@@ -172,15 +203,19 @@ const TimelineItem = styled.div`
     animation: ${slideInRight} 0.8s ease-out forwards;
     animation-delay: ${props => props.index * 0.2}s;
   }
-  
-  @media (max-width: 768px) {
-    margin-left: 80px;
-    margin-bottom: 4rem;
+    @media (max-width: 768px) {
+    margin-left: 50px;
+    margin-bottom: 3rem;
     
     &.animate-right {
       animation: ${slideInLeft} 0.8s ease-out forwards;
       animation-delay: ${props => props.index * 0.2}s;
     }
+  }
+  
+  @media (max-width: 480px) {
+    margin-left: 40px;
+    margin-bottom: 2.5rem;
   }
 `;
 
@@ -234,16 +269,27 @@ const TimelineContent = styled.div`
       border-right-color: rgba(15, 23, 42, 0.8);
     }
   }
-  
-  @media (max-width: 768px) {
-    width: calc(100% - 80px);
+    @media (max-width: 768px) {
+    width: calc(100% - 60px);
     margin-left: 0 !important;
+    padding: 1.5rem;
     
     &::before {
-      left: -30px !important;
+      left: -15px !important;
       right: auto !important;
       border-right-color: rgba(15, 23, 42, 0.8) !important;
       border-left-color: transparent !important;
+      border-width: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    width: calc(100% - 50px);
+    padding: 1.2rem;
+    
+    &::before {
+      left: -12px !important;
+      border-width: 8px;
     }
   }
 `;
@@ -266,7 +312,18 @@ const TimelineDot = styled.div`
   animation-delay: ${props => props.index * 0.3}s;
   
   @media (max-width: 768px) {
-    left: 30px;    transform: translateX(-50%);
+    left: 15px;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(15, 23, 42, 0.9);
+  }
+  
+  @media (max-width: 480px) {
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(15, 23, 42, 0.9);
   }
 `;
 

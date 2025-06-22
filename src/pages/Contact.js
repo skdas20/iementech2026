@@ -89,6 +89,14 @@ const ContactContainer = styled.div`
     position: relative;
     z-index: 2;
   }
+  
+  @media (max-width: 768px) {
+    padding: 4rem 1rem 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 3rem 0.5rem 1rem;
+  }
 `;
 
 const Container = styled.div`
@@ -119,6 +127,17 @@ const Subtitle = styled.p`
   color: #64748b;
   margin-bottom: 4rem;
   animation: ${fadeInUp} 1s ease-out 0.2s both;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const ContentGrid = styled.div`
@@ -127,7 +146,8 @@ const ContentGrid = styled.div`
   margin-top: 2rem;
   
   @media (max-width: 768px) {
-    padding: 0 1rem;
+    padding: 0;
+    margin-top: 1rem;
   }
 `;
 
@@ -142,10 +162,10 @@ const ChatbotCard = styled.div`
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(100, 181, 246, 0.3);
   color: white;
-  max-width: 900px;
+  max-width: 1200px;
   width: 100%;
   height: fit-content;
-  max-height: 800px;
+  max-height: 950px;
   display: flex;
   flex-direction: column;
   animation: ${fadeInUp} 1s ease-out 0.3s both;
@@ -161,9 +181,18 @@ const ChatbotCard = styled.div`
   }
   
   @media (max-width: 768px) {
-    padding: 2rem;
-    max-height: 700px;
-    max-width: 95%;
+    padding: 1.5rem;
+    max-height: 80vh;
+    max-width: 100%;
+    margin: 0 0.5rem;
+    border-radius: 20px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+    max-height: 85vh;
+    margin: 0 0.25rem;
+    border-radius: 15px;
   }
 `;
 
@@ -174,9 +203,14 @@ const ChatbotTitle = styled.h2`
   font-weight: 700;
   text-align: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    @media (max-width: 768px) {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
   
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
   }
 `;
 
@@ -184,12 +218,17 @@ const ChatContainer = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  min-height: 500px;
-  max-height: 550px;
+  min-height: 650px;
+  max-height: 700px;
   
   @media (max-width: 768px) {
-    min-height: 400px;
-    max-height: 450px;
+    min-height: 60vh;
+    max-height: 65vh;
+  }
+  
+  @media (max-width: 480px) {
+    min-height: 65vh;
+    max-height: 70vh;
   }
 `;
 
@@ -215,6 +254,18 @@ const ChatMessages = styled.div`
   &::-webkit-scrollbar-thumb {
     background: rgba(100, 181, 246, 0.5);
     border-radius: 3px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.8rem;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.6rem;
+    border-radius: 10px;
+    margin-bottom: 0.6rem;
   }
 `;
 
@@ -263,6 +314,32 @@ const ChatMessage = styled.div`
       }
     }
   }
+  
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    
+    &.user .message-bubble {
+      margin-left: 1rem;
+    }
+    
+    &.bot .message-bubble {
+      margin-right: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+    
+    &.user .message-bubble {
+      margin-left: 0.5rem;
+    }
+    
+    &.bot .message-bubble {
+      margin-right: 0.5rem;
+    }
+  }
 `;
 
 const MessageBubble = styled.div`
@@ -273,6 +350,21 @@ const MessageBubble = styled.div`
   font-size: 0.9rem;
   line-height: 1.4;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  
+  @media (max-width: 768px) {
+    padding: 0.6rem 1rem;
+    border-radius: 15px;
+    max-width: 85%;
+    font-size: 0.85rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem 0.8rem;
+    border-radius: 12px;
+    max-width: 90%;
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
 `;
 
 const MessageAvatar = styled.div`
@@ -315,7 +407,15 @@ const MessageAvatar = styled.div`
 const ChatInputContainer = styled.div`
   display: flex;
   gap: 0.8rem;
-  align-items: center;
+  align-items: flex-end;
+  
+  @media (max-width: 768px) {
+    gap: 0.6rem;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.5rem;
+  }
 `;
 
 const CharacterCounter = styled.div`
@@ -349,9 +449,11 @@ const ChatInput = styled.input`
   font-size: 1rem;
   transition: all 0.3s ease;
   min-height: 50px;
+  resize: none;
   
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
   }
   
   &:focus {
@@ -365,6 +467,27 @@ const ChatInput = styled.input`
   &:hover:not(:focus) {
     border-color: rgba(100, 181, 246, 0.5);
     background: rgba(255, 255, 255, 0.12);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+    min-height: 45px;
+    
+    &::placeholder {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+    min-height: 40px;
+    border-radius: 20px;
+    
+    &::placeholder {
+      font-size: 0.8rem;
+    }
   }
 `;
 
@@ -384,6 +507,8 @@ const ChatSendButton = styled.button`
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(100, 181, 246, 0.3);
   font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-bottom: 1.5rem;
   
   &:hover {
     transform: scale(1.1);
@@ -401,6 +526,20 @@ const ChatSendButton = styled.button`
     transform: none;
     animation: none;
   }
+  
+  @media (max-width: 768px) {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  @media (max-width: 480px) {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 const QuickSuggestions = styled.div`
@@ -408,6 +547,22 @@ const QuickSuggestions = styled.div`
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: rgba(100, 181, 246, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(100, 181, 246, 0.1);
+  
+  @media (max-width: 768px) {
+    gap: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.3rem;
+    padding: 0.3rem;
+    border-radius: 8px;
+  }
 `;
 
 const SuggestionChip = styled.button`
@@ -416,7 +571,7 @@ const SuggestionChip = styled.button`
   color: #64b5f6;
   padding: 0.4rem 0.8rem;
   border-radius: 15px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -431,6 +586,18 @@ const SuggestionChip = styled.button`
   
   &:active {
     transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.7rem;
+    border-radius: 12px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.65rem;
+    border-radius: 10px;
   }
 `;
 
@@ -516,6 +683,52 @@ const WelcomeMessage = styled.div`
   color: #64b5f6;
   font-size: 0.9rem;
   animation: ${fadeInUp} 0.5s ease-out;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const SampleQuestions = styled.div`
+  background: rgba(100, 181, 246, 0.08);
+  border: 1px solid rgba(100, 181, 246, 0.15);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: none;
+  
+  h4 {
+    color: #64b5f6;
+    font-size: 0.85rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .questions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
+    
+    .question-item {
+      padding: 0.2rem 0;
+      cursor: pointer;
+      border-radius: 6px;
+      padding: 0.3rem 0.5rem;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background: rgba(100, 181, 246, 0.1);
+        color: #64b5f6;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Contact = () => {
@@ -557,7 +770,6 @@ const Contact = () => {
   }, []);
 
   const GEMINI_API_KEY = 'AIzaSyAbSCHasvsdbe0GFh2USyqlxp1Rwsr4wTo';
-
   const suggestions = [
     "What are the conference dates?",
     "How much are the registration fees?",
@@ -565,6 +777,21 @@ const Contact = () => {
     "What are the submission deadlines?",
     "Where is the venue?",
     "How to submit papers?"
+  ];
+
+  const sampleQuestions = [
+    "When is IEMENTech 2026?",
+    "What are the registration fees?",
+    "What topics can I submit papers on?",
+    "Where is the conference venue?",
+    "What are submission deadlines?",
+    "How do I register?",
+    "What's included in registration?",
+    "Contact information?",
+    "Paper format guidelines?",
+    "Early bird discounts?",
+    "IEEE member benefits?",
+    "Accommodation details?"
   ];
 
   const callGeminiAPI = async (query) => {
@@ -660,11 +887,25 @@ const Contact = () => {
                 {isOnline ? 'Online' : 'Offline'}
               </ChatStatus>
             </ChatHeader>
-            
-            <WelcomeMessage>
+              <WelcomeMessage>
               Welcome to IEMENTech 2026! I'm here to help you with conference information. 
               Try asking about dates, registration, topics, or use the suggestions below! 🚀
             </WelcomeMessage>
+            
+            <SampleQuestions>
+              <h4>💡 Ask me anything about:</h4>
+              <div className="questions-list">
+                {sampleQuestions.map((question, index) => (
+                  <div 
+                    key={index} 
+                    className="question-item"
+                    onClick={() => handleSendMessage(question)}
+                  >
+                    • {question}
+                  </div>
+                ))}
+              </div>
+            </SampleQuestions>
             
             <ChatContainer>
               <ChatMessages>
@@ -724,11 +965,10 @@ const Contact = () => {
               </QuickSuggestions>
               
               <ChatInputContainer>
-                <InputWrapper>
-                  <ChatInput
+                <InputWrapper>                  <ChatInput
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
-                    placeholder="Ask about conference details, dates, fees, topics..."
+                    placeholder="Type your question here... (e.g., 'When is the conference?' or 'What are the fees?')"
                     onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                     maxLength={500}
                   />
