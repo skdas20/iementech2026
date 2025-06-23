@@ -86,49 +86,67 @@ const Organizing = () => {
     <OrganizingContainer>
       <Container>
         <Title>Organizing Committee</Title>
-        
-        <Content>
+          <Content>
           <Section>
             <SectionTitle>Chief Patron</SectionTitle>
             <MemberGrid>
               <MemberCard>
-                <MemberName>Dr. Satyajit Chakrabarti</MemberName>
+                <MemberName>Banani Chakrabarti</MemberName>
                 <MemberTitle>Chief Patron</MemberTitle>
                 <MemberAffiliation>
-                  Vice Chancellor, Institute of Engineering & Management, Kolkata
+                  President, IEM, Kolkata
                 </MemberAffiliation>
               </MemberCard>
             </MemberGrid>
           </Section>
 
           <Section>
-            <SectionTitle>Conference Chair</SectionTitle>
+            <SectionTitle>Patron</SectionTitle>
             <MemberGrid>
               <MemberCard>
-                <MemberName>Prof. Dr. Biswajit Sarkar</MemberName>
-                <MemberTitle>Conference Chair</MemberTitle>
+                <MemberName>Satyajit Chakrabarti</MemberName>
+                <MemberTitle>Patron</MemberTitle>
                 <MemberAffiliation>
-                  Director, Institute of Engineering & Management, Kolkata
+                  IEM, Kolkata
                 </MemberAffiliation>
               </MemberCard>
             </MemberGrid>
           </Section>
 
           <Section>
-            <SectionTitle>Program Chairs</SectionTitle>
+            <SectionTitle>Advisory Chair</SectionTitle>
             <MemberGrid>
               <MemberCard>
-                <MemberName>Prof. Dr. Rajesh Kumar</MemberName>
-                <MemberTitle>Program Chair</MemberTitle>
+                <MemberName>Malay Gangopadhyay</MemberName>
+                <MemberTitle>Advisory Chair</MemberTitle>
                 <MemberAffiliation>
-                  Head, Department of ECE, IEM Kolkata
+                  Director, IEM, Kolkata
                 </MemberAffiliation>
               </MemberCard>
+            </MemberGrid>
+          </Section>
+
+          <Section>
+            <SectionTitle>General Chair</SectionTitle>
+            <MemberGrid>
               <MemberCard>
-                <MemberName>Dr. Priyanka Sharma</MemberName>
-                <MemberTitle>Program Co-Chair</MemberTitle>
+                <MemberName>Ratna Chakrabarty</MemberName>
+                <MemberTitle>General Chair</MemberTitle>
                 <MemberAffiliation>
-                  Associate Professor, Department of ECE, IEM Kolkata
+                  IEM, Kolkata
+                </MemberAffiliation>
+              </MemberCard>
+            </MemberGrid>
+          </Section>
+
+          <Section>
+            <SectionTitle>Organizing Chair</SectionTitle>
+            <MemberGrid>
+              <MemberCard>
+                <MemberName>Mili Sarkar</MemberName>
+                <MemberTitle>Organizing Chair</MemberTitle>
+                <MemberAffiliation>
+                  IEM, Kolkata
                 </MemberAffiliation>
               </MemberCard>
             </MemberGrid>
@@ -138,51 +156,37 @@ const Organizing = () => {
             <SectionTitle>Technical Program Committee</SectionTitle>
             <MemberGrid>
               <MemberCard>
-                <MemberName>Dr. Amit Singh</MemberName>
+                <MemberName>Samit Karmakar</MemberName>
                 <MemberTitle>TPC Chair</MemberTitle>
                 <MemberAffiliation>
-                  Professor, Department of ECE, IEM Kolkata
+                  IEM, Kolkata
                 </MemberAffiliation>
               </MemberCard>
               <MemberCard>
-                <MemberName>Dr. Sneha Gupta</MemberName>
-                <MemberTitle>TPC Co-Chair</MemberTitle>
+                <MemberName>Soumik Kumar Kundu</MemberName>
+                <MemberTitle>TPC Chair</MemberTitle>
                 <MemberAffiliation>
-                  Assistant Professor, Department of ECE, IEM Kolkata
-                </MemberAffiliation>
-              </MemberCard>
-              <MemberCard>
-                <MemberName>Dr. Vikash Kumar</MemberName>
-                <MemberTitle>TPC Member</MemberTitle>
-                <MemberAffiliation>
-                  Associate Professor, Department of ECE, IEM Kolkata
+                  IEM, Kolkata
                 </MemberAffiliation>
               </MemberCard>
             </MemberGrid>
           </Section>
 
           <Section>
-            <SectionTitle>Local Organizing Committee</SectionTitle>
+            <SectionTitle>Publication Committee</SectionTitle>
             <MemberGrid>
               <MemberCard>
-                <MemberName>Prof. Anita Das</MemberName>
-                <MemberTitle>Local Chair</MemberTitle>
-                <MemberAffiliation>
-                  Professor, Department of ECE, IEM Kolkata
-                </MemberAffiliation>
-              </MemberCard>
-              <MemberCard>
-                <MemberName>Dr. Rahul Banerjee</MemberName>
-                <MemberTitle>Registration Chair</MemberTitle>
-                <MemberAffiliation>
-                  Assistant Professor, Department of ECE, IEM Kolkata
-                </MemberAffiliation>
-              </MemberCard>
-              <MemberCard>
-                <MemberName>Ms. Shruti Agarwal</MemberName>
+                <MemberName>Ratna Chakrabarty</MemberName>
                 <MemberTitle>Publication Chair</MemberTitle>
                 <MemberAffiliation>
-                  Assistant Professor, Department of ECE, IEM Kolkata
+                  IEM, Kolkata
+                </MemberAffiliation>
+              </MemberCard>
+              <MemberCard>
+                <MemberName>Mili Sarkar</MemberName>
+                <MemberTitle>Publication Chair</MemberTitle>
+                <MemberAffiliation>
+                  IEM, Kolkata
                 </MemberAffiliation>
               </MemberCard>
             </MemberGrid>
